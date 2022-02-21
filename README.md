@@ -9,4 +9,4 @@ Connect is an photo and video sharing application similar to Instagram , Faceboo
  ### Tech Stack:
  1. Front End = Html,CSS,JavaScript   
  2. Framework = Django  
- 3. Databse  = db.sqlite3.
+
