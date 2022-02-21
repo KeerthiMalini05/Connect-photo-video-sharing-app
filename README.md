@@ -6,6 +6,6 @@ Faeture's:
   3.Users can like other people post and can make comment on them.
  
  Tech Stack:
- Front End = Html,CSS,JavaScript
- Framework = Django
- Databse  = db.sqlite3
+ 1.Front End = Html,CSS,JavaScript,
+ 2.Framework = Django,
+ 3.Databse  = db.sqlite3.
