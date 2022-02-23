@@ -19,9 +19,4 @@ urlpatterns = [
         view=views.LogoutView.as_view(),
         name='logout'
     ),
-    path(
-        route='<str:username_slug>/',
-        view=login_required(views.UserDetailView.as_view()),
-        name='detail'
-    ),
 ]
