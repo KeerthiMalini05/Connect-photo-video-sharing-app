@@ -2,13 +2,10 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from posts.models import Post
-
-# Forms
 from posts.forms import PostForm
 
 
 class CreatePostView(LoginRequiredMixin, CreateView):
-    """Create New Post View"""
     template_name = 'posts/new.html'
     form_class = PostForm
     success_url = reverse_lazy('posts:feed')
@@ -20,18 +17,7 @@ class CreatePostView(LoginRequiredMixin, CreateView):
         context['profile'] = self.request.user.profile
         return context
 
-
-class PostFeedView(ListView):
-    """Return all published posts."""
-    template_name = 'posts/feed.html'
-    model = Post
-    ordering = ('-created',)
-    paginate_by = 4
-    context_object_name = 'posts'
-
-
 class PostDetailView(DetailView):
-    """Detail view posts"""
     template_name = 'posts/detail.html'
     slug_field = 'id'
     slug_url_kwarg = 'post_id'
