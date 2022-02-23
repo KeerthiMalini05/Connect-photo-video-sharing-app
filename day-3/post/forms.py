@@ -1,9 +1,4 @@
-"""Posts forms"""
-
-# Django
 from django import forms
-
-# Models
 from posts.models import Post
 
 
