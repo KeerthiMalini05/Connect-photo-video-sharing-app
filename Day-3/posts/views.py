@@ -11,8 +11,7 @@ class CreatePostView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('posts:feed')
     context_object_name = 'form'
 
-    def get_context_data(self, **kwargs):
-        """Add User and profile to context. dictionary"""
+    def get_context_data(self, **kwargs)
         context = super().get_context_data(**kwargs)
         context['profile'] = self.request.user.profile
         return context
